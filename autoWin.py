@@ -4,20 +4,21 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 from datetime import date
 import sys
 import time
+
+options = Options()
+options.add_argument("--headless")
+
 sys.argv[1]
 name = sys.argv[1]
 email = sys.argv[2]
 option_to_select_text = sys.argv[3]
-send_responses = False
-try:
-    send_responses = bool(sys.argv[4])
-except:
-    print("Defaulting to no repsonse")
+send_responses = sys.argv[4]=="Y"
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=options)
 driver.get("https://app.smartsheet.com/b/form/7fad7575b1da4b64a96c8d55358821a0")  
 
 
@@ -63,7 +64,8 @@ responseEmail.send_keys(email)
 submitButton = WebDriverWait(driver,10).until(
     EC.presence_of_element_located((By.XPATH,"//button[@type='submit' and @value='submit']"))
 )
+submitButton.click()
 time.sleep(5)
-#submitButton.click()
+print("ALL CLEAR")
 driver.quit()
 

@@ -1,0 +1,65 @@
+running
+running
+Already ran today
+running
+Already ran today
+running
+Already ran today
+running
+Traceback (most recent call last):
+  File "/Users/jacoblehrman/Projects/AutoWin/autoWin.py", line 23, in <module>
+    driver = webdriver.Chrome(service=ChromeService(CHROME_DRIVER_PATH), options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 55, in __init__
+    self.service.start()
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/common/service.py", line 113, in start
+    self.assert_process_still_running()
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/common/service.py", line 126, in assert_process_still_running
+    raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
+
+running
+Traceback (most recent call last):
+  File "/Users/jacoblehrman/Projects/AutoWin/autoWin.py", line 23, in <module>
+    driver = webdriver.Chrome(service=ChromeService(CHROME_DRIVER_PATH), options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 55, in __init__
+    self.service.start()
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/common/service.py", line 113, in start
+    self.assert_process_still_running()
+  File "/Users/jacoblehrman/Projects/AutoWin/.venv/lib/python3.12/site-packages/selenium/webdriver/common/service.py", line 126, in assert_process_still_running
+    raise WebDriverException(f"Service {self._path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /opt/homebrew/bin/chromedriver unexpectedly exited. Status code was: -9
+
+running
+Already ran today
+running
+running
+Already ran today
+running
+Already ran today
+Balls
+running
+Already ran today
+running
+ALL CLEAR
+running
+Already ran today
+running
+ALL CLEAR
+running
+Already ran today
+running
+ALL CLEAR
+running
+Already ran today
+running
+ALL CLEAR
+running
+Already ran today
+running
+ALL CLEAR
