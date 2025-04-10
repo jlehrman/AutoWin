@@ -1,1 +1,1 @@
-This is a brain rot
+Auto survey filler, run manage.sh to configure
