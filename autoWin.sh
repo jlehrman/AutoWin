@@ -4,8 +4,8 @@ VARS="$DIR/.vars"
 LOG="$DIR/autoWin.log"
 PYTHON="$DIR/.venv/bin/python"
 TODAY=$(date +%m/%d/%Y)
-
-echo "running" >> "$LOG"
+TIME=$(date +%m/%d/%Y:%H:%M:%S)
+echo "$TIME running" >> "$LOG"
 if [ -f "$VARS" ]; then 
     LAST_RUN=$(grep "DATE" "$VARS" | cut -d':' -f2 | xargs)
     if [[ -z "$LAST_RUN" || "$LAST_RUN" != "$TODAY" ]]; then

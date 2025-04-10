@@ -2,7 +2,6 @@
 VARS=./.vars
 PLIST_PATH="$HOME/Library/LaunchAgents/com.jacoblehrman.autofiller.plist"
 new_filler(){
-    launchctl unload "$PLIST_PATH"
     echo "This program will run whenever you boot up your computer for the first time each day, or to an hour set, whichever comes first. Please set the preferred time from 0-23(ex: 17 would be 5:00pm): "
     read TIME
     TIME_INT=$((TIME))
@@ -52,6 +51,7 @@ new_filler(){
     done
     echo -e "DATE:$DATE\nNAME:$NAME\nEMAIL:$EMAIL\nLOC:$LOC\nCONF:$CONF" > "$VARS"
     FILEPATH="$(dirname "$(realpath "$0")")/autoWin.sh"
+    launchctl unload "$PLIST_PATH"
     cat <<EOF > "$PLIST_PATH"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

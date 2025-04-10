@@ -18,7 +18,7 @@ email = sys.argv[2]
 option_to_select_text = sys.argv[3]
 send_responses = sys.argv[4]=="Y"
 
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome()
 driver.get("https://app.smartsheet.com/b/form/7fad7575b1da4b64a96c8d55358821a0")  
 
 
